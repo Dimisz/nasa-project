@@ -1,0 +1,28 @@
+{
+  "name": "nasa-project",
+  "version": "1.0.0",
+  "description": "NASA-project written in Express and React",
+  "main": "index.js",
+  "scripts": {
+    "install-api": "npm install --prefix api",
+    "install-client": "npm install --prefix client",
+    "install": "npm run install-api && npm run install-client",
+    "api": "npm start --prefix api",
+    "watch-api": "npm run watch --prefix api",
+    "client": "npm start --prefix client",
+    "watch": "npm run watch-api & npm run client",
+    "test": "npm run test --prefix api && npm run test --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dimisz/nasa-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Dimisz/nasa-project/issues"
+  },
+  "homepage": "https://github.com/Dimisz/nasa-project#readme"
+}
