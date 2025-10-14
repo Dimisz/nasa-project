@@ -11,7 +11,8 @@
     "watch-api": "npm run watch --prefix api",
     "client": "npm start --prefix client",
     "watch": "npm run watch-api & npm run client",
-    "test": "npm run test --prefix api && npm run test --prefix client"
+    "test": "npm run test --prefix api && npm run test --prefix client",
+    "deploy": "npm run build --prefix client && npm start --prefix api"
   },
   "repository": {
     "type": "git",
