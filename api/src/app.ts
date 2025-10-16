@@ -4,6 +4,7 @@ import path from 'path';
 // import morgan from 'morgan';
 
 import planetsRouter from './routes/planets/planets.router';
+import launchesRouter from "./routes/launches/launches.router";
 
 const CLIENT_URL = 'http://localhost:3000';
 const app = express();
@@ -20,7 +21,9 @@ app.use(function (req: Request, res: Response, next: NextFunction) {
 app.use(express.json());
 // serving the built react app
 app.use(express.static(path.join(__dirname, '..', 'public')))
+// routers
 app.use(planetsRouter);
+app.use(launchesRouter);
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public', 'index.html'))
 })
